@@ -1,6 +1,8 @@
 from transformers import pipeline
 import gradio as gr
+from openxlab.model import download
 
+print(download('alvin123/test_01', 'model_1'))
 
 def hello(i):
     classifier = pipeline("sentiment-analysis")
