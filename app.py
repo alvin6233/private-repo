@@ -1,9 +1,13 @@
 from transformers import pipeline
 import gradio as gr
 from openxlab.model import download
+from openxlab.model import inference
 
 def hello(i):
-    print(download('alvin123/test_01', 'model_1'))
+    try:
+        result = inference("meijiawen1/test-image", ["./demo_text_ocr.jpg"])
+    except Exception as e:
+        print(f'error:{e}')
     classifier = pipeline("sentiment-analysis")
     a = classifier(i)
     return a
