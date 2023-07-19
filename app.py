@@ -8,7 +8,7 @@ def hello(i):
     #     result = inference("meijiawen1/test-image", ["./demo_text_ocr.jpg"])
     # except Exception as e:
     #     print(f'error:{e}')
-    download(model_repo='houshaowei/AnimateDiff', model_name=['mm_sd_v15.ckpt','mm_sd_v14.ckpt'])
+    download(model_repo='houshaowei/AnimateDiff', model_name=['mm_sd_v15.ckpt','mm_sd_v14.ckpt'], overwrite=True)
     classifier = pipeline("sentiment-analysis")
     a = classifier(i)
     return a
