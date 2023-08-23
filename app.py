@@ -8,6 +8,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 def hello(i):
     tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
     model = AutoModelForCausalLM.from_pretrained("distilgpt2")
+    
     return i
 
 
