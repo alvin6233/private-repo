@@ -9,10 +9,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 def hello(i):
     tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
     model = AutoModelForCausalLM.from_pretrained("distilgpt2")
-    files = os.listdir('/home/xlab-app-center')
-    print(files)
-    files_1 = os.listdir('/')
-    print(files_1)
+ 
     os.system('ls -al /home/xlab-app-center')
     os.system('ls -al /')
     #os.system('rm -rf /home/xlab-app-center/.cache/huggingface/hub/models--distilgpt2')
